@@ -1,10 +1,7 @@
 #!/usr/bin/python2.7
 
 # Create the gnuplot script for MO energy diagrams
-# This script is released under MIT license.
-
-# Usage: plotMO.py <datefile> > <tol>
-
+# Usage: plotMO.py <datefile> > <script>
 # Date file structure: 
 #	1) different molecules diveded by blank line, 
 #	2) for each molecule section, start with molecule name
@@ -12,30 +9,6 @@
 #	4) rest of section are energys, 1 MO per line
 # Update time: 2015.01.02
 # Written by Chang Liu
-
-##############################The MIT License (MIT)#############################
-#                                                                              #
-#Copyright (c) <2015> <Chang Liu(cliu18@ncsu.edu)>                             #
-#                                                                              #
-#Permission is hereby granted, free of charge, to any person obtaining a copy  #
-#of this software and associated documentation files (the "Software"), to deal #
-#in the Software without restriction, including without limitation the rights  #
-#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     #
-#copies of the Software, and to permit persons to whom the Software is         #
-#furnished to do so, subject to the following conditions:                      #
-#                                                                              #
-#The above copyright notice and this permission notice shall be included in    #
-#all copies or substantial portions of the Software.                           #
-#                                                                              #
-#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    #
-#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      #
-#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   #
-#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        #
-#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, #
-#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     #
-#THE SOFTWARE.                                                                 #
-#                                                                              #
-################################################################################
 
 
 # import modules
