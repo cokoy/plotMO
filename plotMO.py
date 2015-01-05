@@ -178,6 +178,7 @@ def main():
 		degStat = False
 		barLeft = diaCenter - 10
 		barRight = diaCenter + 10
+		DegStat = False
 		
 		for energy in MOenergys[mol]:
 			
