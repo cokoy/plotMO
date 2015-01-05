@@ -10,7 +10,7 @@
 #	2) for each molecule section, start with molecule name
 #	3) second line for HOMO number
 #	4) rest of section are energys, 1 MO per line
-# Update time: 2015.01.02
+# Update time: 2015.01.05
 # Written by Chang Liu
 
 ##############################The MIT License (MIT)#############################
@@ -99,16 +99,23 @@ def main():
 		print """Usage: plotMO.py <datefile> > <script>"""
 		exit(0)
 	
+	name = ""
+	for char in sys.argv[1]:
+		if char == '.':
+			break
+
+		name+=char
+	
 	# set tolerance for degenerate (for plot only, 
 	# if energy are not exact the same, will use different color
 	degToler = 0.001
 	if len(sys.argv) > 3:
 		degToler=float(sys.argv[2])
-	
 	try:
 		datefile=open(sys.argv[1], 'r')
 		inputTemp=datefile.read().splitlines()
 		datefile.close()
+		print 'set output "%s.ps" ' % name
 	except:
 		sys.exit("ERROR. No such date file")
 	
@@ -251,7 +258,7 @@ if __name__=='__main__':
 #################################
 
 set term postscript enhanced color solid font "Helvetica"
-set output "MO.ps"
+
 
 set ylabel "{E_{orbital}} [Hartree}]" font "Helvetica,15" offset 1,-0.5
 set noxtics
