@@ -1,5 +1,6 @@
 # Test dir with lab datas#
 test/
+localtest/
 
 ### OSX ###
 .DS_Store

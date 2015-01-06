@@ -59,7 +59,7 @@ def putDegMO(diaCenter, degEnergy, degStyl, degType):
 			eHOMO = degEnergy[i]
 		else:
 			eHOMO = 0
-	
+
 	# calc the width of line and where to put them
 	if deg <= 3:
 		unitLen = 30.
@@ -79,9 +79,11 @@ def putDegMO(diaCenter, degEnergy, degStyl, degType):
 			degStyl[i] = 1
 		elif degEnergy[i] != degEnergy[i+1]:
 			currlc = currlc + 1
-		
-		degStyl[i+1] = currlc
-		
+		if degEnergy[i+1] == eHOMO:
+			degStyl[i+1] = 1
+		else:
+			degStyl[i+1] = currlc
+	
 	# start output
 	left = start + unitMarg
 	for i in range(deg):
