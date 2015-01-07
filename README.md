@@ -8,7 +8,11 @@ Script List
   - Usage: ```plotMO.py <datafile> [tolerance_for_degeneratio]```
   - Output: Script for gnuplot(it will print out on stdout)
  
-  
+To Do List
+-----
+ - script to create data file from gaussian log file automatically
+ - make the plotMO.py able to ignore useless spaces in data file
+ - add some example to the project and document
 
 License
 -----
