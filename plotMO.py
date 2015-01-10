@@ -13,6 +13,9 @@
 # Update time: 2015.01.05
 # Written by Chang Liu
 
+# <2015.01.10>
+# Change the unit of plot from Hartree to eV.
+
 ##############################The MIT License (MIT)#############################
 #                                                                              #
 #Copyright (c) <2015> <Chang Liu(cliu18@ncsu.edu)>                             #
@@ -108,11 +111,12 @@ def main():
 
 		name+=char
 	
+	Hartree2eV = 27.2113850560
 	# set tolerance for degenerate (for plot only, 
 	# if energy are not exact the same, will use different color
-	degToler = 0.001
+	degToler = 0.005 * Hartree2eV
 	if len(sys.argv) > 3:
-		degToler=float(sys.argv[2])
+		degToler=float(sys.argv[2]) * Hartree2eV
 	try:
 		datefile=open(sys.argv[1], 'r')
 		inputTemp=datefile.read().splitlines()
@@ -153,7 +157,7 @@ def main():
 			#print HOMOnum[molCount-1]
 			continue
 		# get MO energy
-		energy = float(line)
+		energy = float(line) * Hartree2eV
 		maxE = max(maxE, energy)
 		minE = min(minE, energy)
 		MOenergys[molCount-1].append(energy)
@@ -262,7 +266,7 @@ if __name__=='__main__':
 set term postscript enhanced color solid font "Helvetica"
 
 
-set ylabel "{E_{orbital}} [Hartree}]" font "Helvetica,15" offset 1,-0.5
+set ylabel "{E_{orbital}} [eV}]" font "Helvetica,15" offset 1,-0.5
 set noxtics
 set nokey
 
