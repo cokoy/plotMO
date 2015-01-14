@@ -115,7 +115,7 @@ def main():
 	# set tolerance for degenerate (for plot only, 
 	# if energy are not exact the same, will use different color
 	degToler = 0.005 * Hartree2eV
-	if len(sys.argv) > 3:
+	if len(sys.argv) >= 3:
 		degToler=float(sys.argv[2]) * Hartree2eV
 	try:
 		datefile=open(sys.argv[1], 'r')
