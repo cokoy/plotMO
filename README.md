@@ -7,6 +7,10 @@ Script List
 - plotMO.py:
   - Usage: ```plotMO.py <datafile> [tolerance_for_degeneratio]```
   - Output: Script for gnuplot(it will print out on stdout)
+- nodeg/plotMO.py:
+  - A new version of plotMO script, no more consider energy degeneracy.
+  - Usage: ```plotMO.py <datafile> ```
+  - Output: Script for gnuplot(it will print out on stdout)
  
 To Do List
 -----
