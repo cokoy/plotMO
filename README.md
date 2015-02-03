@@ -4,11 +4,16 @@ This project is aiming to develop scripts that can help generating MO energy dia
 
 Script List
 -----
-- plotMO.py:
+- plotMO_deg.py:
+
+The original script I create to plot the MO diagram. However, It looks not very good.
   - Usage: ```plotMO.py <datafile> [tolerance_for_degeneratio]```
   - Output: Script for gnuplot(it will print out on stdout)
+
+
 - nodeg/plotMO.py:
-  - A new version of plotMO script, no more consider energy degeneracy.
+
+A new version of plotMO script, no more consider energy degeneracy.
   - Usage: ```plotMO.py <datafile> ```
   - Output: Script for gnuplot(it will print out on stdout)
  
