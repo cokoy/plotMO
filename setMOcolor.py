@@ -84,7 +84,7 @@ def main():
 		line = line.replace("HOMO", colorRec[int(MOinfo[0])])
 		print line
 
-
+	print 5*""
 
 if __name__=='__main__':
 	main()
