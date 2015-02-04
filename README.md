@@ -11,17 +11,23 @@ The original script I create to plot the MO diagram. However, It looks not very 
   - Output: Script for gnuplot(it will print out on stdout)
 
 
-- nodeg/plotMO.py:
+- plotMO.py:
 
 A new version of plotMO script, no more consider energy degeneracy.
   - Usage: ```plotMO.py <datafile> ```
   - Output: Script for gnuplot(it will print out on stdout)
- 
+
+-  glog2MOinfo.py:
+Get MO energy information from Gaussian log file.
+  - Usage: ``` glog2MOinfo.py <gaussian log> ```
+  - Output: Data file contain all MO energies and type(occ, HOMO, virt)
 To Do List
 -----
- - script to create data file from gaussian log file automatically
- - make the plotMO.py able to ignore useless spaces in data file
- - add some example to the project and document
+ - <del>script to get MO data file from gaussian log file automatically</del>
+ - <del>make the plotMO.py able to ignore useless spaces in data file</del>
+ - <del>add some example to the project and document</del>
+ - improve the script
+ - prepare color for plotMO.py input file
 
 License
 -----
