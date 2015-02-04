@@ -22,9 +22,17 @@
 # Make a new version, without degenerance, the code read much better than before.
 # Thanks to Kushal's gnuplot script gives me some better idea :D
 
+# <2015.02.04>
+# Define some new global viriables to make modify the script easier
 
 # import modules
 import sys
+
+# def some global variable
+linewidth = 0.0000001
+defaultColor = "black"
+arrowStyle = """set arrow from %f,%f to %f, %f nohead lc rgb "%s" linewidth %f"""
+
 
 # print header
 def printHeader():
@@ -54,10 +62,10 @@ def printArrow(info, left, right):
 	try:
 		color = info[2]
 	except:
-		color = "black"
+		color = defaultColor
 	
 	print " ### %s ### " % commet
-	print """set arrow from %f,%f to %f, %f nohead lc rgb "%s" linewidth 1.""" % (float(left), energy, float(right), energy, color)
+	print arrowStyle % (float(left), energy, float(right), energy, color, linewidth)
 	return
 
 
