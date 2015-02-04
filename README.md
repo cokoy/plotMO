@@ -18,9 +18,11 @@ A new version of plotMO script, no more consider energy degeneracy.
   - Output: Script for gnuplot(it will print out on stdout)
 
 -  glog2MOinfo.py:
+
 Get MO energy information from Gaussian log file.
   - Usage: ``` glog2MOinfo.py <gaussian log> ```
   - Output: Data file contain all MO energies and type(occ, HOMO, virt)
+
 To Do List
 -----
  - <del>script to get MO data file from gaussian log file automatically</del>
