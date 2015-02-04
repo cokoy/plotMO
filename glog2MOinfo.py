@@ -41,7 +41,7 @@ def main():
 
 
 
-	# similar as grep "SCF Done\|Alpha  occ. eigenvalues\|Alpha virt. eigenvalues" FeTpy2_singlet.log
+	# similar to command grep "SCF Done\|Alpha  occ. eigenvalues\|Alpha virt. eigenvalues" FeTpy2_singlet.log
 	# find the final occupied orbital energy lines and virtual orbital energy lines.
 	for line in inputTemp:
 		if "SCF Done" in line:
