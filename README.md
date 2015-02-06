@@ -23,13 +23,21 @@ Get MO energy information from Gaussian log file.
   - Usage: ``` glog2MOinfo.py <gaussian log> ```
   - Output: Data file contain all MO energies and type(occ, HOMO, virt)
 
+
+ - setMOcolor.py:
+
+Help user select MO range and set color
+  - Usage: ```setMOcolor.py <glog2MOinfo.py outputfile> <start energy in Hartree> <end energy in Hartree> [color:orbit1,orbit2...] [color:orbit_1:orbit_n]```
+  - Output is the input for plotMO.py
+
+
 To Do List
 -----
  - <del>script to get MO data file from gaussian log file automatically</del>
  - <del>make the plotMO.py able to ignore useless spaces in data file</del>
  - <del>add some example to the project and document</del>
- - improve the script
- - prepare color for plotMO.py input file
+ - improve the scripts
+ - <del>prepare color for plotMO.py input file</del>
 
 License
 -----
