@@ -20,6 +20,8 @@
 # Date of creation: 2015.02.04
 # Created by: Chang Liu
 
+# <2015.02.06>
+# Find error when treat with Huckel calculation, fix this bug
 
 # import modules
 import sys
@@ -43,6 +45,8 @@ def main():
 
 	# similar to command grep "SCF Done\|Alpha  occ. eigenvalues\|Alpha virt. eigenvalues" FeTpy2_singlet.log
 	# find the final occupied orbital energy lines and virtual orbital energy lines.
+	occMOLine = []
+	virtMOLine = []
 	for line in inputTemp:
 		if "SCF Done" in line:
 			occMOLine = []
