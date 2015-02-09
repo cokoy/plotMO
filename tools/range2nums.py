@@ -9,14 +9,15 @@ import sys
 def main():
 	nums = ""
 	for argv in sys.argv[1:]:
-		if len(argv.split("-")) < 2:
-			nums = nums + (" %d " % int(argv))
-		else:
-			(start,end) = argv.split("-")
-			start = min(int(start),int(end))
-			end = max(int(start),int(end))
-			for i in range(start,end+1):
-				nums = nums + (" %d " % i)
+		for singlerange in argv.split(","):
+			if len(singlerange.split("-")) < 2:
+				nums = nums + (" %d " % int(singlerange))
+			else:
+				(start,end) = singlerange.split("-")
+				start = min(int(start),int(end))
+				end = max(int(start),int(end))
+				for i in range(start,end+1):
+					nums = nums + (" %d " % i)
 	print nums
 
 
